@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Vũ Trí Baber</title>
+
+</head>
+<body>
+    <div id="body">
+        <h1><span>blog</span></h1>
+        <div>
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Vublog" class="figure">
+                        <img src="~/img/a-vu.jpg" width="375.99" height="295" alt="Vu image">
+                    </a>
+                    <div>
+                        <h3>NGƯỜI SÁNG LẬP: ANH ĐỖ LINH VŨ</h3>
+                        <p>
+                            Chẳng ai có đam mê từ lúc đầu, đó là sự thật. Anh Vũ bôn ba trên đường đời tấp nập, trải qua bao nghề sương gió. Từ người đàn ông vất vả sửa những chiếc xe, quấn từng cuộn mô tơ. Cũng như những người trẻ khác,1992, anh thích đi theo ba chơi, rồi từ lúc nào lại cầm kéo nghịch.
+                        </p>
+                        <a asp-area="" asp-controller="Home" asp-action="Vublog" class="more">read this</a>
+                    </div>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Triblog" class="figure">
+                        <img src="~/img/tri.jpg" width="375.99" height="295" alt="Tri image">
+                    </a>
+                    <div>
+                        <h3>ĐỒNG SÁNG LẬP: ANH TRÍ TAM QUỐC</h3>
+                        <p>
+                            Anh Trí Tam Quốc – một chàng trai trải đời với nhiều công việc khác nhau. Anh chỉ quẩn quanh vài tuần, vài tháng rồi bỏ đi. Anh Vũ – người anh trai đã dạy anh từng đường dao, lưỡi kéo, từng đường tông đơ trên tóc.
+                        </p>
+                        <a asp-area="" asp-controller="Home" asp-action="Triblog" class="more">read this</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vũ Trí Baber</title>
+</head>
+<body>
+    
+    <div id="body">
+        <div id="featured">
+            <img src="~/img/the-beacon.jpg" alt="">
+            <div>
+                <h2>BARBER SHOP VŨ TRÍ</h2>
+                <span>Mr.Đỗ Linh Vũ và Mr.Đỗ Cao Trí – CÂU CHUYỆN THƯƠNG HIỆU ÍT AI BIẾT ĐẾN</span>
+                <span>BarberShop Vũ Trí – sự kết hợp giữa tên của hai anh em ruột thịt, Mr. Đỗ Linh Vũ và Mr. Trí Tam Quốc.</span>
+                <span>Có truyền thống làm nghề lâu đời, cha của hai anh là một người lão luyện trong nghề đã hơn 40 năm</span>
+                <a asp-area="" asp-controller="Home" asp-action="Blog" class="more">read more</a>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Blog">
+                    <img src="~/img/a-vu.jpg" width="299.98" height="241.98" alt="Vũ Baber">
+                    <span>Anh Vũ</span>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Blog">
+                    <img src="~/img/tri.jpg" width="299.98" height="241.98" alt="Trí Baber">
+                    <span>Anh Trí</span>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Aboutus">
+                    <img src="~/img/logopnf.png" width="299.98" height="241.98" alt="Vũ Trí logo">
+                    <span>BarberShop Vũ Trí</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

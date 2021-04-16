@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Vũ Trí Baber</title>
+</head>
+<body>
+    <div class="gallery-one" id="body">
+        <h1><span>gallery</span></h1>
+        <ul class="gallery">
+            <li>
+                <a href="~/img/sidepart/Sidepart1.jpg">
+                    <img src="~/img/sidepart/Sidepart1.jpg" width="299.98" height="298.99" alt="Sidepart">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/sidepart/Sidepart2.jpg">
+                    <img src="~/img/sidepart/Sidepart2.jpg" width="299.98" height="298.99" alt="Sidepart">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/sidepart/Sidepart3.jpg">
+                    <img src="~/img/sidepart/Sidepart3.jpg" width="299.98" height="298.99" alt="Sidepart">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/sidepartmullet/Sidepartmullet1.jpg">
+                    <img src="~/img/sidepartmullet/Sidepartmullet1.jpg" width="299.98" height="298.99" alt="SidepartMullet">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/sidepartmullet/Sidepartmullet2.jpg">
+                    <img src="~/img/sidepartmullet/Sidepartmullet2.jpg" width="299.98" height="298.99" alt="SidepartMullet">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/sidepartmullet/Sidepartmullet3.jpg">
+                    <img src="~/img/sidepartmullet/Sidepartmullet3.jpg" width="299.98" height="298.99" alt="SidepartMullet">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/quangminh/undercut1.jpg">
+                    <img src="~/img/quangminh/undercut1.jpg" width="299.98" height="298.99" alt="Undercut">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/quangminh/undercut2.jpg">
+                    <img src="~/img/quangminh/undercut2.jpg" width="299.98" height="298.99" alt="Undercut">
+                </a>
+            </li>
+            <li>
+                <a href="~/img/quangminh/undercut3.jpg">
+                    <img src="~/img/quangminh/undercut3.jpg" width="299.98" height="298.99" alt="Undercut">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        $(window).load(function () {
+            $('.gallery-one').magnificPopup({
+                delegate: 'a', 
+                type: 'image',
+                gallery: { enabled: true }
+            });
+        });
+    </script>
+</body>
+</html>
+
+

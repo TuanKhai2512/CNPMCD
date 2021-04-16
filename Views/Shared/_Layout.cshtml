@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BaiLam</title>
+
+    <script type="text/javascript" src="~/js/mobile.js"></script>
+    @* My custom *@
+
+    @*<link rel="stylesheet" href="~/font/font-awesome-4.5.0/css/font-awesome.min.css">*@
+
+    @*<link rel="stylesheet" href="~/css/hero-slider-style.css">*@
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    @*<link rel="stylesheet" href="~/css/bootstrap.min.css">*@
+    @*<link rel="stylesheet" href="~/css/templatemo-style.css">*@
+
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/mobile.css" media="screen and (max-width : 568px)">
+    @*end of my custom *@
+
+</head>
+<body>
+    <script type="text/javascript" src="~/js/jquery-1.11.3.min.js"></script>
+    @*<div id="leftHalf"></div>
+    <div id="rightHalf"></div>*@
+    <div id="header">
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
+            <img src="~/img/icons/logopnf.png" alt="">
+        </a>
+        <ul id="navigation">
+            <li class="selected">
+                <a asp-area="" asp-controller="Home" asp-action="Index">home</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Aboutus">about</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Gallery">gallery</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Blog">blog</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - BaiLam - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+    @* my custom *@
+    @*<script type="text/javascript" src="~/js/jquery-3.6.0.min.js"></script>*@
+    <script src="~/js/tether.min.js"></script>
+    @*<script src="~/js/hero-slider-main.js"></script>*@
+    @*<script src="~/js/bootstrap.min.js"></script>*@
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    @* end of my custom *@
+
+    <div id="footer">
+        <div>
+            <p>&copy; 2021 by TranKhai. From TDTU with love</p>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100009451589729" target="_blank" id="twitter">twitter</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100009451589729" target="_blank" id="facebook">facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/tom.99.a9" target="_blank" id="googleplus">googleplus</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/tom.99.a9" target="_blank" id="pinterest">pinterest</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
