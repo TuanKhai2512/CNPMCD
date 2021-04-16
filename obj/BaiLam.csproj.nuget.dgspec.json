@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CDCNPMFinal\\BaiLam\\BaiLam.csproj": {}
+    "E:\\Gitcnpm\\CNPMCD\\BaiLam.csproj": {}
   },
   "projects": {
-    "E:\\CDCNPMFinal\\BaiLam\\BaiLam.csproj": {
+    "E:\\Gitcnpm\\CNPMCD\\BaiLam.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CDCNPMFinal\\BaiLam\\BaiLam.csproj",
+        "projectUniqueName": "E:\\Gitcnpm\\CNPMCD\\BaiLam.csproj",
         "projectName": "BaiLam",
-        "projectPath": "E:\\CDCNPMFinal\\BaiLam\\BaiLam.csproj",
+        "projectPath": "E:\\Gitcnpm\\CNPMCD\\BaiLam.csproj",
         "packagesPath": "C:\\Users\\longt\\.nuget\\packages\\",
-        "outputPath": "E:\\CDCNPMFinal\\BaiLam\\obj\\",
+        "outputPath": "E:\\Gitcnpm\\CNPMCD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\longt\\AppData\\Roaming\\NuGet\\NuGet.Config",

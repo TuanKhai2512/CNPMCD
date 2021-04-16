@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y9akkM/f0noTZ9pub2Vot98lUM6G+MBmKQrD9lgk2wtz2y2SM1cKl+n/r5PRPovdnXQ2TzI6n7BnB/7yCUXjgA==",
+  "dgSpecHash": "ICZURqsbGIz3G9/e2WbCkWjdXuWIsvOfMRg3e+8xPsFlJYEmmEDiK/nHYwK1EaqCT1mEym3o3pk+iAJvtTrNdg==",
   "success": true,
-  "projectFilePath": "E:\\CDCNPMFinal\\BaiLam\\BaiLam.csproj",
+  "projectFilePath": "E:\\Gitcnpm\\CNPMCD\\BaiLam.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\longt\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\longt\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
