@@ -1,2 +1,2 @@
 # CNPMCD
-Final Demo
+The project TimeSheetMan for final exam!!!
