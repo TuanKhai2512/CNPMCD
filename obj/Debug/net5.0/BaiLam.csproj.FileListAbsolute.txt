@@ -794,13 +794,6 @@ E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\scopedcss\bundle\BaiLam.styles.css
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\BaiLam.TagHelpers.input.cache
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\BaiLam.TagHelpers.output.cache
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\BaiLam.RazorCoreGenerate.cache
-E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Aboutus.cshtml.g.cs
-E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Blog.cshtml.g.cs
-E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Gallery.cshtml.g.cs
-E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Signin.cshtml.g.cs
-E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Triblog.cshtml.g.cs
-E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Vublog.cshtml.g.cs
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -814,3 +807,4 @@ E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\BaiLam.dll
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\ref\BaiLam.dll
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\BaiLam.pdb
 E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\BaiLam.genruntimeconfig.cache
+E:\Gitcnpm\CNPMCD\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs

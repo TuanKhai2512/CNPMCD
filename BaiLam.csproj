@@ -6,16 +6,57 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\img\icons\**" />
+    <Compile Remove="wwwroot\img\quangminh\**" />
+    <Compile Remove="wwwroot\img\sidepartmullet\**" />
+    <Compile Remove="wwwroot\img\sidepart\**" />
+    <Content Remove="wwwroot\img\icons\**" />
+    <Content Remove="wwwroot\img\quangminh\**" />
+    <Content Remove="wwwroot\img\sidepartmullet\**" />
+    <Content Remove="wwwroot\img\sidepart\**" />
+    <EmbeddedResource Remove="wwwroot\img\icons\**" />
+    <EmbeddedResource Remove="wwwroot\img\quangminh\**" />
+    <EmbeddedResource Remove="wwwroot\img\sidepartmullet\**" />
+    <EmbeddedResource Remove="wwwroot\img\sidepart\**" />
+    <None Remove="wwwroot\img\icons\**" />
+    <None Remove="wwwroot\img\quangminh\**" />
+    <None Remove="wwwroot\img\sidepartmullet\**" />
+    <None Remove="wwwroot\img\sidepart\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Aboutus.cshtml" />
+    <Content Remove="Views\Home\Blog.cshtml" />
+    <Content Remove="Views\Home\Gallery.cshtml" />
+    <Content Remove="Views\Home\Index1.cshtml" />
+    <Content Remove="Views\Home\Signin.cshtml" />
+    <Content Remove="Views\Home\Triblog.cshtml" />
+    <Content Remove="Views\Home\Vublog.cshtml" />
+    <Content Remove="wwwroot\css\hero-slider-style.css" />
+    <Content Remove="wwwroot\css\magnific-popup.css" />
+    <Content Remove="wwwroot\css\mobile.css" />
+    <Content Remove="wwwroot\css\templatemo-style.css" />
+    <Content Remove="wwwroot\img\BB-Banner-web-1.jpg" />
+    <Content Remove="wwwroot\img\icons.jpg" />
+    <Content Remove="wwwroot\img\logopnf.png" />
+    <Content Remove="wwwroot\img\mobile-close.png" />
+    <Content Remove="wwwroot\img\mobile-collapse.png" />
+    <Content Remove="wwwroot\img\mobile-expand.png" />
+    <Content Remove="wwwroot\img\mobile-menu.png" />
+    <Content Remove="wwwroot\img\nen.jpg" />
+    <Content Remove="wwwroot\img\the-beacon.jpg" />
+    <Content Remove="wwwroot\img\tri.jpg" />
+    <Content Remove="wwwroot\img\vutriCouple.jpg" />
+    <Content Remove="wwwroot\js\hero-slider-main.js" />
     <Content Remove="wwwroot\js\jquery-3.6.0.min.js" />
+    <Content Remove="wwwroot\js\jquery.magnific-popup.min.js" />
+    <Content Remove="wwwroot\js\mobile.js" />
+    <Content Remove="wwwroot\js\tether.min.js" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\img\a-vu.jpg" />
   </ItemGroup>
 
 </Project>

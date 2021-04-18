@@ -23,30 +23,30 @@ namespace BaiLam.Controllers
             return View();
         }
 
-        public IActionResult Gallery()
+        /*public iactionresult gallery()
         {
-            return View();
+            return view();
         }
-        public IActionResult Signin()
+        public iactionresult signin()
         {
-            return View();
+            return view();
         }
-        public IActionResult Blog()
+        public iactionresult blog()
         {
-            return View();
+            return view();
         }
-        public IActionResult Triblog()
+        public iactionresult triblog()
         {
-            return View();
+            return view();
         }
-        public IActionResult Vublog()
+        public iactionresult vublog()
         {
-            return View();
+            return view();
         }
-        public IActionResult Aboutus()
+        public iactionresult aboutus()
         {
-            return View();
-        }
+            return view();
+        }*/
         
 
 
