@@ -21,7 +21,7 @@ namespace BaiLam.Models
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectDetail> ProjectDetails { get; set; }
-        public DbSet<TimesheetEntrie> TimesheetEntries { get; set; }
+        /*public DbSet<TimesheetEntrie> TimesheetEntries { get; set; }*/
         
     }
 }

@@ -25,6 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\TimesheetEntrie.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\Aboutus.cshtml" />
     <Content Remove="Views\Home\Blog.cshtml" />
     <Content Remove="Views\Home\Gallery.cshtml" />

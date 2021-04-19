@@ -26,6 +26,6 @@ namespace BaiLam.Models
 
         public virtual Role role { get; set; }
         public virtual ICollection<ProjectDetail> projectdetails { get; set; }
-        public virtual TimesheetEntrie entries { get; set; }
+        
     }
 }

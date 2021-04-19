@@ -86,6 +86,9 @@ namespace BaiLam.Migrations
                     b.Property<double>("Fri")
                         .HasColumnType("float");
 
+                    b.Property<double>("HoursWorked")
+                        .HasColumnType("float");
+
                     b.Property<double>("Mon")
                         .HasColumnType("float");
 
@@ -126,33 +129,6 @@ namespace BaiLam.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("BaiLam.Models.TimesheetEntrie", b =>
-                {
-                    b.Property<int>("EntryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("EmployeeID")
-                        .HasColumnType("int");
-
-                    b.Property<double>("HoursWorked")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ProjectID")
-                        .HasColumnType("int");
-
-                    b.HasKey("EntryId");
-
-                    b.HasIndex("EmployeeID")
-                        .IsUnique();
-
-                    b.HasIndex("ProjectID")
-                        .IsUnique();
-
-                    b.ToTable("TimesheetEntries");
-                });
-
             modelBuilder.Entity("BaiLam.Models.Employee", b =>
                 {
                     b.HasOne("BaiLam.Models.Role", "role")
@@ -183,36 +159,13 @@ namespace BaiLam.Migrations
                     b.Navigation("project");
                 });
 
-            modelBuilder.Entity("BaiLam.Models.TimesheetEntrie", b =>
-                {
-                    b.HasOne("BaiLam.Models.Employee", "employee")
-                        .WithOne("entries")
-                        .HasForeignKey("BaiLam.Models.TimesheetEntrie", "EmployeeID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BaiLam.Models.Project", "project")
-                        .WithOne("entries")
-                        .HasForeignKey("BaiLam.Models.TimesheetEntrie", "ProjectID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("employee");
-
-                    b.Navigation("project");
-                });
-
             modelBuilder.Entity("BaiLam.Models.Employee", b =>
                 {
-                    b.Navigation("entries");
-
                     b.Navigation("projectdetails");
                 });
 
             modelBuilder.Entity("BaiLam.Models.Project", b =>
                 {
-                    b.Navigation("entries");
-
                     b.Navigation("projectdetail");
                 });
 

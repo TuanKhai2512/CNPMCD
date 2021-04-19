@@ -71,7 +71,8 @@ namespace BaiLam.Migrations
                     Tue = table.Column<double>(type: "float", nullable: false),
                     Wed = table.Column<double>(type: "float", nullable: false),
                     Thur = table.Column<double>(type: "float", nullable: false),
-                    Fri = table.Column<double>(type: "float", nullable: false)
+                    Fri = table.Column<double>(type: "float", nullable: false),
+                    HoursWorked = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -84,33 +85,6 @@ namespace BaiLam.Migrations
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ProjectDetails_Projects_ProjectID",
-                        column: x => x.ProjectID,
-                        principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TimesheetEntries",
-                columns: table => new
-                {
-                    EntryId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    EmployeeID = table.Column<int>(type: "int", nullable: false),
-                    ProjectID = table.Column<int>(type: "int", nullable: false),
-                    HoursWorked = table.Column<double>(type: "float", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TimesheetEntries", x => x.EntryId);
-                    table.ForeignKey(
-                        name: "FK_TimesheetEntries_Employees_EmployeeID",
-                        column: x => x.EmployeeID,
-                        principalTable: "Employees",
-                        principalColumn: "EmployeeID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_TimesheetEntries_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
                         principalColumn: "ProjectID",
@@ -131,27 +105,12 @@ namespace BaiLam.Migrations
                 name: "IX_ProjectDetails_ProjectID",
                 table: "ProjectDetails",
                 column: "ProjectID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TimesheetEntries_EmployeeID",
-                table: "TimesheetEntries",
-                column: "EmployeeID",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TimesheetEntries_ProjectID",
-                table: "TimesheetEntries",
-                column: "ProjectID",
-                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "ProjectDetails");
-
-            migrationBuilder.DropTable(
-                name: "TimesheetEntries");
 
             migrationBuilder.DropTable(
                 name: "Employees");

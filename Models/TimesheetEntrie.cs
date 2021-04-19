@@ -16,7 +16,7 @@ namespace BaiLam.Models
         [ForeignKey("Project")]
         public int ProjectID { get; set; }
         public double HoursWorked { get; set; }
-        
+
 
         public virtual Employee employee { get; set; }
         public virtual Project project { get; set; }

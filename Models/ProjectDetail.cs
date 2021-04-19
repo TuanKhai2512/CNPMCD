@@ -8,6 +8,15 @@ namespace BaiLam.Models
 {
     public class ProjectDetail
     {
+        public ProjectDetail()
+        {
+            this.Mon = 0;
+            this.Tue = 0;
+            this.Wed = 0;
+            this.Thur = 0;
+            this.Fri = 0;
+            this.HoursWorked = Mon + Tue + Wed + Thur + Fri;
+        }
         [Key]
         public int detailID { get; set; }
         [Required]
@@ -23,7 +32,7 @@ namespace BaiLam.Models
         public double Wed { get; set; }
         public double Thur { get; set; }
         public double Fri { get; set; }
-
+        public double HoursWorked { get; set; }
 
         public virtual Project project { get; set; }
         public virtual Employee employee { get; set; }

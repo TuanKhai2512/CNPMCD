@@ -9,6 +9,11 @@ namespace BaiLam.Models
 {
     public class Project
     {
+        public Project()
+        {
+            this.DateCreated = DateTime.Now;
+            this.Deadline = DateTime.Now;
+        }
         [Key]
         [Required]
         public int ProjectID { get; set; }
@@ -19,7 +24,8 @@ namespace BaiLam.Models
         public DateTime DateCreated { get; set; }
         [Column(TypeName = "date")]
         public DateTime Deadline { get; set; }
+
         public virtual ICollection<ProjectDetail> projectdetail { get; set; }
-        public virtual TimesheetEntrie entries { get; set; }
+        
     }
 }
