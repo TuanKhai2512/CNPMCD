@@ -420,12 +420,12 @@ a:focus{
 
 /*Slider CSS by Khai*/
 
-.banner{
+.banner {
 	position: relative;
 	top: 0px;
 	left: 0;
 	width: 100%;
-	background: url(../img/banner.jpg) no-repeat center center;
+	background: url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80) no-repeat center center;
 	background-size: cover;
 	padding: 100px 0 100px;
 }
