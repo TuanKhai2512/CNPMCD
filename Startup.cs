@@ -1,4 +1,6 @@
+using BaiLam.Interfaces;
 using BaiLam.Models;
+using BaiLam.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BaiLam.UnitOfWork;
 
 namespace BaiLam
 {
@@ -25,8 +28,20 @@ namespace BaiLam
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
             services.AddDbContext<TimeSheetContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("TimeSheetDB")));
+
+            services.AddDbContext<TimeSheetContext>(options =>
+            options.UseSqlServer(
+             Configuration.GetConnectionString("TimeSheetDB"),
+            b => b.MigrationsAssembly(typeof(TimeSheetContext).Assembly.FullName)));
+            #region Repositories
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+            services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IUnitOfWork, BaiLam.UnitOfWork.UnitOfWork>();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +59,7 @@ namespace BaiLam
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -51,7 +67,13 @@ namespace BaiLam
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(name: "dashboard",
+                            pattern: "dashboard",
+                            defaults: new { controller = "Admin", action = "Index" });
+                endpoints.MapRazorPages();
             });
+           
         }
+        
     }
 }

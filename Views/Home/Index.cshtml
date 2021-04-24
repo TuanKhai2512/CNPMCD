@@ -1,4 +1,5 @@
-﻿@{
+﻿@model BaiLam.Models.Contact
+@{
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -173,8 +174,6 @@
             </div>
         </div>
     </section>
-    <!-- Services section ends -->
-    <!-- Our Team section starts -->
     <section class="ourteam" id="ourteam">
         <div class="container">
             <div class="row">
@@ -186,25 +185,7 @@
             </div>
 
             <div class="row">
-                @*<div class="col-md-4">
-                    <div class="team-box">
-                        <figure>
-                            <img src="~/img/team-1.png" alt="" />
-                        </figure>
-
-                        <div class="team-entry">
-                            <p>Hair cut & Color Specialist</p>
-                            <h3>Alan Black</h3>
-                            <div class="team-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>*@
+                
 
                 <div class="col-md-6">
                     <div class="team-box">
@@ -250,8 +231,6 @@
 
         </div>
     </section>
-    <!-- Our Team section ends -->
-    <!-- Photo Gallery section starts -->
     <section class="gallery" id="gallery">
         <div class="container-fluid">
             <div class="row no-pad">
@@ -377,8 +356,6 @@
             </div>
         </div>
     </section>
-    <!-- Photo Gallery section ends -->
-    <!-- Pricing Section starts -->
     <div class="pricing" id="pricing">
         <div class="container">
             <div class="row no-pad">
@@ -438,9 +415,7 @@
             </div>
         </div>
     </div>
-    <!-- Pricing Section ends -->
-    
-    <!-- Contactus section starts -->
+
     <section class="contactus" id="contact">
         <div class="container-fluid">
             <div class="row no-pad">
@@ -448,19 +423,18 @@
                     <div class="contact-form">
                         <h2 class="contact-form-title">Book Now</h2>
 
-                        <form>
+                        <form asp-action="Contact">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter Your Name" />
+                                <input asp-for="Name" class="form-control" placeholder="Enter Your Name" />
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter Your Email" />
+                                <input asp-for="Email" class="form-control" placeholder="Enter Your Email" />
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" placeholder="Write Message Here"></textarea>
+                                <textarea class="form-control" asp-for="Message" rows="5" placeholder="Write Message Here"></textarea>
                             </div>
-
                             <div class="form-group">
                                 <input type="submit" class="btn-contact" value="Submit" />
                             </div>
@@ -476,7 +450,6 @@
             </div>
         </div>
     </section>
-    <!-- Contactus section ends -->
 
     <footer>
         <div class="container">

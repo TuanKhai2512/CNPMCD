@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BaiLam.Seeds;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,7 +22,11 @@ namespace BaiLam.Models
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectDetail> ProjectDetails { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
         /*public DbSet<TimesheetEntrie> TimesheetEntries { get; set; }*/
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Seed();
+        }
     }
 }

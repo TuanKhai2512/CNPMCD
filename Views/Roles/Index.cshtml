@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BaiLam.Models.Role>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body class="sb-nav-fixed">
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <p>
+                        <a class="btn btn-success" asp-action="Create">Create Role</a>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.RolesName)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.RolesName)
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.RolesID">Edit</a> |
+                                            <a class="btn btn-info" asp-action="Details" asp-route-id="@item.RolesID">Details</a>
+                                            @*<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.RolesID">Delete</a>*@
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Trần Tuấn Khải & Cao Minh Phát</div>
+                        <div>
+                            <a asp-action="Index">2020</a>
+                            &middot;
+                            <a asp-action="Index">2021</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>

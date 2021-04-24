@@ -1,0 +1,76 @@
+﻿@model BaiLam.Models.Employee
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body class="sb-nav-fixed">
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-user mr-1"></i>
+                        Delete user: @Html.DisplayFor(Model => Model.Name)
+                    </div>
+                    <div class="card-body">
+                        <div class="col"></div>
+                        <div class="col-md-4">
+                            <dl class="row">
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.Name)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.Phone)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.Phone)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.Address)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.Address)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.Email)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.role)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.role.RolesName)
+                                </dd>
+                            </dl>
+                            <form asp-action="Delete">
+                                <input type="hidden" asp-for="EmployeeID" />
+                                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                                <a class="btn btn-secondary" asp-action="Index">Back to List</a>
+                            </form>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Trần Tuấn Khải & Cao Minh Phát</div>
+                        <div>
+                            <a asp-action="Index">2020</a>
+                            &middot;
+                            <a asp-action="Index">2021</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>

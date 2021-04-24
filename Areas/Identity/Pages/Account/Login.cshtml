@@ -1,0 +1,48 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Halaman Login</title>
+    <link href="~/login/css/style.css" rel="stylesheet">
+    <link href="~/login/css/Animation.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Welcome</h1>
+        <form id="account" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <label>Email</label><br>
+            <input asp-for="Input.Email"><br>
+            <label>Password</label><br>
+            <input asp-for="Input.Password"><br>
+            <button type="submit">Log in</button>
+        </form>
+    </div>
+
+    <script src="~/login/js/Animation.js"></script>
+</body>
+</html>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -13,6 +13,7 @@ namespace BaiLam.Models
         [Required]
         public int EmployeeID { get; set; }
         [Required]
+        
         [ForeignKey("Role")]
         public int RoleID { get; set; }
         [Column(TypeName = "nvarchar(100)")]

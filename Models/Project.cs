@@ -20,8 +20,10 @@ namespace BaiLam.Models
         [Column(TypeName = "nvarchar(100)")]
         [Required]
         public string ProjectName { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}")]
         [Column(TypeName ="date")]
         public DateTime DateCreated { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}")]
         [Column(TypeName = "date")]
         public DateTime Deadline { get; set; }
 

@@ -10,12 +10,7 @@ namespace BaiLam.Models
     {
         public ProjectDetail()
         {
-            this.Mon = 0;
-            this.Tue = 0;
-            this.Wed = 0;
-            this.Thur = 0;
-            this.Fri = 0;
-            this.HoursWorked = Mon + Tue + Wed + Thur + Fri;
+
         }
         [Key]
         public int detailID { get; set; }

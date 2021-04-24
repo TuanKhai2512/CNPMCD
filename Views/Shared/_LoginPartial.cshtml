@@ -1,0 +1,107 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using BaiLam.Areas.Identity.Data
+
+@inject SignInManager<AdminUser> SignInManager
+@inject UserManager<AdminUser> UserManager
+@if (SignInManager.IsSignedIn(User))
+{
+
+
+    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" asp-controller="Admin" asp-action="Index">TDTU</a>
+
+
+            @*test*@
+            <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i>Hello @UserManager.GetUserName(User)!</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" type="submit">Logout</button>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+            </ul>
+            @*end of test*@
+
+        </nav>
+    </form>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" asp-controller="Admin" asp-action="Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                            Dashboard
+                        </a>
+                        @*Employee*@
+                        <div class="sb-sidenav-menu-heading">Employees and Roles</div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmployee" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fa fa-address-card"></i></div>
+                            Employees
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseEmployee" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" asp-controller="Employees" asp-action="Index">All Employee</a>
+                                <a class="nav-link" asp-controller="Employees" asp-action="Create">Create Employee</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRole" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fa fa-male"></i></div>
+                            Roles
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseRole" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" asp-controller="Roles" asp-action="Index">All Role</a>
+                                <a class="nav-link" asp-controller="Roles" asp-action="Create">Create Employee</a>
+                            </nav>
+                        </div>
+                        @* Employee *@
+                        @*Project*@
+                        <div class="sb-sidenav-menu-heading">Project</div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProject" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-th-list"></i></div>
+                            Projects
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseProject" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" asp-controller="Projects" asp-action="Index">All Projects</a>
+                                <a class="nav-link" asp-controller="Projects" asp-action="Create">Create Project</a>
+                            </nav>
+                        </div>
+
+
+                        @*End of Project*@
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    @UserManager.GetUserName(User)
+                </div>
+            </nav>
+            
+        </div>
+    </div>
+}
+else
+{
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+
+        <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            <li><a asp-area="Identity" asp-page="/Account/Login" style="color:#FFFFFF">Login</a></li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            </nav>
+        </div>
+    </div>
+}

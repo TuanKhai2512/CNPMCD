@@ -1,0 +1,192 @@
+﻿@model ViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+</head>
+<body class="sb-nav-fixed">
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Dashboard</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Welcome Admin</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">Total Employee: @ViewBag.TotalUser</div>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">Total Project: @ViewBag.TotalProject</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card bg-info text-white mb-4">
+                                <div class="card-body">Total Respone: @ViewBag.TotalContact</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" cellspacing="0" width="100%" style="display:inline-table;">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.emp.FirstOrDefault().Name)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.emp.FirstOrDefault().role)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.emp.FirstOrDefault().Phone)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.emp.FirstOrDefault().Address)
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item1 in Model.emp)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem1 => item1.Name)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem1 => item1.role.RolesName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem1 => item1.Phone)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem1 => item1.Address)
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable2" cellspacing="0" width="100%" style="float: left;">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.pro.FirstOrDefault().ProjectName)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.pro.FirstOrDefault().DateCreated)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.pro.FirstOrDefault().Deadline)
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item2 in Model.pro)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem2 => item2.ProjectName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem2 => item2.DateCreated)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem2 => item2.Deadline)
+                                                    </td>
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card col-xl-12">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.con.FirstOrDefault().Name)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.con.FirstOrDefault().Email)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.con.FirstOrDefault().Message)
+                                            </th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.con)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Email)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Message)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Trần Tuấn Khải & Cao Minh Phát</div>
+                        <div>
+                            <a asp-action="Index">2020</a>
+                            &middot;
+                            <a asp-action="Index">2021</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
