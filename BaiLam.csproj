@@ -45,7 +45,6 @@
     <Content Remove="Views\Home\Signin.cshtml" />
     <Content Remove="Views\Home\Triblog.cshtml" />
     <Content Remove="Views\Home\Vublog.cshtml" />
-    <Content Remove="Views\Roles\Delete.cshtml" />
     <Content Remove="wwwroot\css\hero-slider-style.css" />
     <Content Remove="wwwroot\css\magnific-popup.css" />
     <Content Remove="wwwroot\css\mobile.css" />

@@ -67,6 +67,7 @@ namespace BaiLam.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["RoleID"] = new SelectList(_context.Roles, "RolesID", "RolesName", employee.RoleID);
+            
             return View(employee);
         }
 
