@@ -11,3 +11,4 @@ update-database -Context BaiLam.Models.TimeSheetContext
 # Login Account
 Email: Admin_1@gmail.com
 Password: Admin_1
+tester
