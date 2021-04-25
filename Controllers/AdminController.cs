@@ -27,7 +27,7 @@ namespace BaiLam.Controllers
             ViewBag.TotalUser = _context.Employees.Count();
             ViewBag.TotalProject = _context.Projects.Count();
             ViewModel mymodel = new ViewModel();
-            mymodel.emp = _context.Employees.ToList();
+            mymodel.emp = _context.Employees.Include(r=>r.role).ToList();
             mymodel.pro = _context.Projects.ToList();
             mymodel.con = _context.Contacts.ToList();
             return View(mymodel);
